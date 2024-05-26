@@ -1,19 +1,17 @@
 'use client'
 
-import { useRouter } from 'next/navigation';
+import { createPost } from '@/app/action'
 
 export default function CreateBlogPage() {
-  const router = useRouter();
-
-  function save(){
-    //kayıt işlemi
-    router.push("/blog");
-  }
-
   return (
     <main>
-     <h1>Create Blog Page</h1>  
-     <button onClick={save}>Save</button>   
+      <h1>Create Blog Page</h1>
+      <form action={createPost}>
+        <input name="subject" />
+        <br />
+        <textarea name="content"></textarea>
+        <button type="submit">Save</button>
+      </form>
     </main>
   );
 }
