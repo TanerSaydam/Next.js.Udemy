@@ -3,6 +3,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { useSelectedLayoutSegment } from "next/navigation";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +20,12 @@ export default function RootLayout({ children, team,dashboard }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Link href="/">Home</Link>
+        <br/>
+        <Link href="/blog">Blog</Link>
         {children}    
-        {segment === "blog" ? team : dashboard}
+        {team}
+        {dashboard}
       </body>
     </html>
   );
