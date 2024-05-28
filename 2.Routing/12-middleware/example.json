@@ -1,9 +1,11 @@
 {
-    "cookies": {},
-    "geo": {},
-    "ip": "undefined",
-    "nextUrl": {
-    "href": "http://localhost:3000/_next/static/chunks/app/layout.js",
+  "cookies": {},
+  "geo": {},
+  "ip": "undefined",  
+  "url": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
+  "bodyUsed": false,
+  "nextUrl": {
+    "href": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
     "origin": "http://localhost:3000",
     "protocol": "http:",
     "username": "",
@@ -11,9 +13,9 @@
     "host": "localhost:3000",
     "hostname": "localhost",
     "port": "3000",
-    "pathname": "/_next/static/chunks/app/layout.js",
+    "pathname": "/_next/static/chunks/app-pages-internals.js",
     "search": "",
-    "searchParams": {  },
-    "hash": ""            
+    "searchParams": {},
+    "hash": ""
   }
 }
