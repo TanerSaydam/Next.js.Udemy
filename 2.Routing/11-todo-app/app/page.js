@@ -28,7 +28,7 @@ export default function Home() {
       <input onChange={(e)=> setWork(e.target.value)}/>
       <button onClick={create}>Create</button>
       <ul>
-        {todos.map((val,i)=> <li key={i}>{val}</li>)}
+        {todos.map((val,i)=> <li key={i}>{val.work}</li>)}
       </ul>
     </>
   );

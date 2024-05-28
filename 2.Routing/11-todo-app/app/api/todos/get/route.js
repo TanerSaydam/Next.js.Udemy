@@ -1,5 +1,6 @@
-export const Todos = ["Example 1","Example 2"];
-
 export async function GET(){
-    return Response.json(Todos);
+    const result = await fetch("http://localhost:9500/todos",{
+        cache: "no-store"
+    }).then(res=> res.json());
+    return Response.json(result);
 }

@@ -1,9 +1,10 @@
-import { Todos } from "../get/route";
-
 export async function POST(request){
     const res = await request.json();
     
-    Todos.push(res.work);
+    await fetch("http://localhost:9500/todos",{
+        method: "POST",
+        body: JSON.stringify(res)
+    });
 
     return Response.json({message: "Create is successful"});
 }
