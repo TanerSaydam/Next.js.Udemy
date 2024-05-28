@@ -7,6 +7,7 @@ export default function TodoPage(){
 
     useEffect(()=> {
         fetch("/api/todo").then(res=> res.json()).then(data => setData(data));
+        axios.get("/api/todo").then(res => setData(res.data));
     },[])
 
     return <></>
