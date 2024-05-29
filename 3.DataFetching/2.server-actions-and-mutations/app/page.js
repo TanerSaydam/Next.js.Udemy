@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
 import { create } from "./actions";
+import { SubmitButton } from "./button";
 
 export default function Home() { 
   const [todos, setTodos] = useState([]);  
@@ -19,7 +20,7 @@ export default function Home() {
         <input name="work"/>
       </div>
       <div>
-        <button type="submit">Save</button>
+       <SubmitButton name="Save"/>
       </div>
     </form>
     <hr/>
