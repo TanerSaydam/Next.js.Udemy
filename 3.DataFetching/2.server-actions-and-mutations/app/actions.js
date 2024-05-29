@@ -1,9 +1,15 @@
 import { revalidateTag } from "next/cache";
+import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 export async function create(userId, formData) {
   'use action'
   try {
+
+    const value = cookies().get("token");
+    cookies().set("name","Taner Saydam");
+    cookies().delete("name");
+
     const work = formData.get("work");
     //const userId = formData.get("userId");
 
