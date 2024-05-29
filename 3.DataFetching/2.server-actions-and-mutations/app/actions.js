@@ -1,16 +1,21 @@
 import { redirect } from "next/navigation";
 
-export async function create(userId,formData){
-    'use action'       
+export async function create(userId, formData) {
+  'use action'
+  try {
     const work = formData.get("work");
     //const userId = formData.get("userId");
 
     await new Promise(resolve => setTimeout(resolve, 3000));
 
-    await fetch("http://localhost:9500/todos",{
+    await fetch("http://localhost:9500/todos", {
       method: "POST",
-      body: JSON.stringify({work: work, userId: userId, isCreated: true})
+      body: JSON.stringify({ work: work, userId: userId, isCreated: true })
     });
 
     redirect("/");
-  }  
+  } catch (error) {
+    throw new Error("Something went wrong");
+  }
+
+}  
