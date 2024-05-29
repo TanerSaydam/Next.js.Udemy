@@ -9,7 +9,7 @@ export async function create(userId,formData){
 
     await fetch("http://localhost:9500/todos",{
       method: "POST",
-      body: JSON.stringify({work: work, userId: userId})
+      body: JSON.stringify({work: work, userId: userId, isCreated: true})
     });
 
     redirect("/");
