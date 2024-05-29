@@ -1,3 +1,4 @@
+import { revalidateTag } from "next/cache";
 import { redirect } from "next/navigation";
 
 export async function create(userId, formData) {
@@ -13,6 +14,7 @@ export async function create(userId, formData) {
       body: JSON.stringify({ work: work, userId: userId, isCreated: true })
     });
 
+    revalidateTag("/todos");
     redirect("/");
   } catch (error) {
     throw new Error("Something went wrong");
